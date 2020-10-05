@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+		<!--
+			* {margin:0;padding:0;}
+			html,body {overflow:hidden;width:100%;height:100%;}
+			body {color:#f90;background-color:#000;}
+			a,a:hover,a:visited {color:#f90;}
+			span{border:1px dotted #f80; margin:2px;}
+		-->
+		</style><style type="text/css"></style>
+		<script type="text/javascript" async="" src="files/ga.js"></script><script language="JavaScript">
+		//<!-- 
+			function togglehidden(whichLayer)
+			{
+				if (document.getElementById(whichLayer).style.display == "none") {
+					document.getElementById(whichLayer).style.display = "";
+				} else {
+					document.getElementById(whichLayer).style.display = "none";
+				}
+			}
+		//--> 
+		</script>
+		
+		<script type="text/javascript" src="files/processing.js"></script>
+		<script type="text/javascript" src="files/dropping.js"></script>
+		<title>BallDroppings</title>
+	</head>
+	<body>
+		<canvas id="canvasElement" width="1444" height="1284"></canvas>
+		<div style="position:absolute;bottom:10px;left:0px;"><a href="#" style="color:#f80;" title="Toggles controls." onclick="if (document.getElementById('HelpWrapper').style.display == '') {togglehidden('HelpWrapper');togglehidden('ControlWrapper');} else {togglehidden('ControlWrapper');}">Options</a></div>
+		<div style="position:absolute;bottom:0px;left:35%;display:none;" id="ControlWrapper">
+			<span>
+				Drop rate <input value="+" onmousedown="confreset();" type="submit"><input value="-" onmousedown="ballDropRate+=10;" type="submit"><input onclick="ballDropRate=1" value="*" type="button"><input onclick="MakeNewBall()" value="O" type="button"><input onclick="ballDropRate=100" value="Std" type="button"><input onclick="ballDropRate=0" value="Stop" type="button">
+			</span>
+			<span>
+				Gravity <input value="+" onmousedown="gravity+=0.1;" type="submit"><input value="-" onmousedown="gravity-=0.1;" type="submit">(On/off)<input id="c_gravity" checked="checked" type="checkbox">
+			</span>
+			<span>
+				Spread: <input id="randrop" value="0" style="width:35px;" type="text">
+				Bounce size<input id="hitsize" value="1" style="width:35px;" type="text">
+			</span>
+			<span>
+				Tracing<input id="c_tracing" value="0" style="width:35px;" type="text"><input value="Clear" onclick="Clear('Tracing');" type="button">
+			</span><br>
+			<span>
+			Clear:
+				<input onclick="Clear('Some');" value="Standard" type="submit">
+				<input onclick="Clear('All')" value="Empty" type="button">
+				<input onclick="Clear('Balls');" value="Clear balls" type="button">
+				<input onclick="Clear('Lines');" value="Clear lines" type="button">
+				<input onclick="lines.pop()" value="Regret line" type="button">
+			</span>
+			<span>
+				Sound? <input id="ConfSound" type="checkbox">
+				Grow balls on bounce? <input id="ConfBallGrow" checked="checked" type="checkbox">
+			</span>
+		</div>
+		<div style="position:absolute;bottom:0px;left:30%;right:30%;display:none;" id="HelpWrapper">
+      BallDroppings was originally made by: <a href="https://github.com/jtnimoy/BallDroppings">Josh Nimoy</a>
+       It was then hacked by <a href="http://www.thaoh.net/">Thaoh Myrdania</a> and <a href="http://www.jimckf.com/">Jckf</a>. <b>Tracing</b> needs about 50 for you to see an effect at all, a higher tracing number will speed up the running of the script.
+		</div>
+		<div style="position:absolute;bottom:10px;right:0px;">Balls: <input id="d_balls" style="width:35px;background-color:#000;color:#fff;font-weight:bold;border:0px;" disabled="disabled" value="1" type="text"><a href="#" style="color:#f80;" title="Click me, fool!" onclick="if (document.getElementById('ControlWrapper').style.display == '') {togglehidden('ControlWrapper');togglehidden('HelpWrapper');} else {togglehidden('HelpWrapper');}">Help</a></div>
+		<!-- 
+			Todo:
+				Pause.
+				Flytte Hele linjer.
+				Flytte Emitter(ene).
+				Legge Til/Fjerne Emittere.(Lage Emitter'array?)
+				Lagre Banen.
+				Laste Banen.
+			-->
+		
+		
+    <!-- 
+     10/05/20 DDM - eliminated reference to sound.swf
+     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" data="files/sound.swf" id="sound" width="1" height="1">
+     <param name="movie" value="files/sound.swf">
+		 <param name="allowScriptAccess" value="always">
+		 <embed src="files/sound.swf" name="sound" play="true" loop="false" allowscriptaccess="always" type="application/x-shockwave-flash" width="1" height="1" align="middle">
+     <a class="lmbugiuewqwmhcisctvb" href="files/sound.swf"></a></object>
+     <a class="lmbugiuewqwmhcisctvb" href="files/sound.swf"></a>
+      -->
+	
+</body></html>
