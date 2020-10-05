@@ -1,14 +1,0 @@
-This package was obtained in October 2020 from:
-http://www.thaoh.net/BallDroppings/#
-
-It was derived from an earlier, non-color version by Josh Nimoy,
-https://github.com/jtnimoy/BallDroppings
-
-Notes about the Thaoh version:
-
-This version works on all three browsers (Pale Moon, Firefox, Chrome),
-but on the latter two, if I turn on sound, the program hangs.
-
-On my saved copy, with *any* of the browsers, 
-if I turn on sound, the program hangs.
-
