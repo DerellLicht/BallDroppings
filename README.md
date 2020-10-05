@@ -15,6 +15,8 @@ http://www.thaoh.net/BallDroppings/#
 Unfortunately, Thaoh *also* appears to have vanished from the internet; 
 Most of the links on his page are dead, and the most recent activity by him appears to be back in 2016.
 
+My modifications have been made on Thaoh's version, which I downloaded from his website.
+
 ##  My actions on this program
 The one issue that I had with both previous versions of this program, is that they used
 an swf (Flash) file to store the sounds.  On most browsers, the first call to the 'play sound' function
