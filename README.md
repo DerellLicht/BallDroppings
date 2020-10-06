@@ -29,6 +29,17 @@ That *should* make the program work with sound on all browsers.
 A second mod that I _may_ make, is to try to make color selection for the lines be more consistent;
 they seem to be somewhat random at this point.
 
+##  historical notes
+> Thaoh had included the following note on the 'Help' display, in his version of this program.
+I do not actually have any idea what his note about 'Tracing' refers to, and I have seen *no*
+impact from trying any value for the tracing field.  So I'm removing that comment and replacing 
+it with info about me... but I will retain the note here, in case it has meaning for someone
+in the future:
+
+'Tracing' needs about 50 for you to see an effect at all, 
+a higher tracing number will speed up the running of the script.
+
+
 ##  Licensing for this program
 Josh Nimoy's original github repository has a Creative Commons license, 
 and my derivations of his program will also be released under that license.
