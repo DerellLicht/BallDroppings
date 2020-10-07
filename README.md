@@ -22,7 +22,7 @@ The one issue that I had with both previous versions of this program, is that th
 an swf (Flash) file to store the sounds.  On most browsers, the first call to the 'play sound' function
 would hang the page.
 
-So my primary modification will be to extract the sounds from the .swf file,
+So my primary modification has been to extract the sounds from the .swf file,
 and use conventional javascript functions to select and play those sounds.
 That *should* make the program work with sound on all browsers.
 
