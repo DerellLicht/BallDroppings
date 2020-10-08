@@ -206,9 +206,13 @@ function Ball(){
 		this.forceY = mvn.y;
 		
 		//Grow the ball
-		if (document.getElementById('ConfBallGrow').checked) 
+    //  DDM - we need this computation for sound computation,
+    //  even if ball growth is not selected.
+    //  Local variable will be used for this purpose
+    var local_rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
+    if (document.getElementById('ConfBallGrow').checked) 
 		{
-			this.rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
+      this.rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
 		}
 		
 		//Play the resource hogging sound?
@@ -216,7 +220,8 @@ function Ball(){
 		{ 
       // var fm = getFlashMovie("sound");
       // var vel = this.rad;
-      var vel = Math.floor(this.rad);
+      // var vel = Math.floor(this.rad);
+      var vel = Math.floor(local_rad);
       
       // console.log(vel)
       if(vel>39)vel=39;//don't blow the array
