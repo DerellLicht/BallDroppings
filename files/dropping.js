@@ -212,7 +212,8 @@ function Ball(){
     var local_rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
     if (document.getElementById('ConfBallGrow').checked) 
 		{
-      this.rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
+      // this.rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
+      this.rad = local_rad;
 		}
 		
 		//Play the resource hogging sound?
