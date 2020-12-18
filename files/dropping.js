@@ -219,6 +219,10 @@ function Ball(){
 		//Play the resource hogging sound?
 		if (document.getElementById('ConfSound').checked)
 		{ 
+      //  DDM - this was my primary modification...
+      //  Extract the sound files from sound.swf (into sounds subdir),
+      //  build the path/file name from the index,
+      //  and use the javascript function to play the sounds.
       // var fm = getFlashMovie("sound");
       // var vel = this.rad;
       // var vel = Math.floor(this.rad);
