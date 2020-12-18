@@ -206,7 +206,7 @@ function Ball(){
 		this.forceY = mvn.y;
 		
 		//Grow the ball
-    //  DDM - we need this computation for sound computation,
+    //  DDM - we need this value for sound computation,
     //  even if ball growth is not selected.
     //  Local variable will be used for this purpose
     var local_rad = Math.sqrt(this.forceX*this.forceX + this.forceY*this.forceY)*parseInt(document.getElementById('hitsize').value);
