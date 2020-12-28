@@ -26,8 +26,13 @@ So my primary modification has been to extract the sounds from the .swf file,
 and use conventional javascript functions to select and play those sounds.
 That *should* make the program work with sound on all browsers.
 
-A second mod that I _may_ make, is to try to make color selection for the lines be more consistent;
-they seem to be somewhat random at this point.
+A second bug fix was that if 'Grow balls on bounce' was turned off, the bouncing balls
+didn't function correctly.  I fixed that as well.
+
+Another mod that I _may_ make, is to try to make color selection for the lines be more consistent;
+they seem to be somewhat random at this point.  This will take significantly more
+effort, though, as the mechanism for selecting and propagating colors for the balls
+is far from evident in the code.
 
 ##  historical notes
 > Thaoh had included the following note on the 'Help' display, in his version of this program.
