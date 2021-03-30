@@ -230,7 +230,7 @@ function Ball(){
       
       // console.log(vel)
       if(vel>39)vel=39;//don't blow the array
-      if(vel<0)vel=0;
+      if(vel<1)vel=1;
       
       // 
       // fm.playSound(Math.round(vel));//call flash function
