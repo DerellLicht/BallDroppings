@@ -248,7 +248,6 @@ function Ball(){
       // console.log(str)
       var hdlAudio = new Audio(str);
       hdlAudio.play();      
-      delete hdlAudio ;
 		}
 	}
 }//end class
