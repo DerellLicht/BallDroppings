@@ -219,10 +219,21 @@ function Ball(){
 		//Play the resource hogging sound?
 		if (document.getElementById('ConfSound').checked)
 		{ 
+      //************************************************************************************
       //  DDM - this was my primary modification...
       //  Extract the sound files from sound.swf (into sounds subdir),
       //  build the path/file name from the index,
       //  and use the javascript function to play the sounds.
+      //  
+      //  03/31/21 Even after the index fix below, there is still some problem here 
+      //  that I don't understand... Once I get a certain number of balls in flight,
+      //  19 or so for Firefox, 12 or so for Pale Moon, does not occur with MS Edge,
+      //  the sounds just run out of control, cannot be turned off, are disconnected
+      //  from the actuall balls in play.  
+      //  I tried calling delete on hdlAudio handle, but that made no difference.
+      //  I have no idea what is going on here.
+      //************************************************************************************
+      //  The commented lines are from Josh Nimoy's original code.
       // var fm = getFlashMovie("sound");
       // var vel = this.rad;
       // var vel = Math.floor(this.rad);
@@ -230,15 +241,14 @@ function Ball(){
       
       // console.log(vel)
       if(vel>39)vel=39;//don't blow the array
-      if(vel<1)vel=1;
+      if(vel<1)vel=1; //  03/31/21 change from 0 to 1 to match filenames
       
-      // 
       // fm.playSound(Math.round(vel));//call flash function
       var str = "sounds/sound_" + ("00" + vel).substr(-2,2) + ".mp3" ;
       // console.log(str)
-      // var audio = new Audio('sounds/sound_01.mp3');
-      var audio = new Audio(str);
-      audio.play();      
+      var hdlAudio = new Audio(str);
+      hdlAudio.play();      
+      delete hdlAudio ;
 		}
 	}
 }//end class
