@@ -227,11 +227,12 @@ function Ball(){
       //  
       //  03/31/21 Even after the index fix below, there is still some problem here 
       //  that I don't understand... Once I get a certain number of balls in flight,
-      //  19 or so for Firefox, 12 or so for Pale Moon, does not occur with MS Edge,
-      //  the sounds just run out of control, cannot be turned off, are disconnected
-      //  from the actuall balls in play.  
-      //  I tried calling delete on hdlAudio handle, but that made no difference.
-      //  I have no idea what is going on here.
+      //  19 or so for Firefox, 12 or so for Pale Moon, the sounds just run out of control, 
+      //  cannot be turned off, are disconnected from the actuall balls in play.  
+      //  This issue does *not* occur with Chrome or MS Edge.
+      //  
+      //  I tried asking for advice on various javascript forums, ca March/April 2021,
+      //  but never got any responses or discussion of any sort.
       //************************************************************************************
       //  The commented lines are from Josh Nimoy's original code.
       // var fm = getFlashMovie("sound");
