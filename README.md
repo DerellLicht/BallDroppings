@@ -45,7 +45,38 @@ in the future:
 a higher tracing number will speed up the running of the script.
 
 
+##  Bugs
+
+There is one major bug present in this application... if user gets many balls in play
+(15 or so seems to be sufficient), with sounds turned on, the sounds will get confused
+and the program will completely lose control of them.  
+
+One result of this bug, is that the sounds become irregular, and it does not sound like 
+all sounds are actually present (there should be one sound for each ball, though the 
+actual sounds wrap at 39 balls).  The second result of this bug, is that if you turn 
+sounds off, they don't actually stop!!  
+
+Later note: this bug actually only occurs with Firefox browser, 2021 version.
+It does *not* occur with Chrome, at least with 20 balls in flight.
+
+I have *no* firm idea what is causing this bug, so it is unlikely that I'll be able to fix it...
+
+1. My first guess is, that the javascript Audio:play() function runs to completion before
+another call can begin, and after awhile it just runs out of time to get all the sounds
+generated before the next cycle begins.
+
+2. Another possibility is that I simply need to pre-allocate all 39 sound files,
+before beginning to generate sounds.  In the current code, I allocate a new Audio
+object every time I want to generate a sound.  That is clearly inefficient, even though
+Java has garbage collection.  However, it doesn't appear to me that the program is
+actually generating an index for each sound, so the traditional technique of 
+pre-allocating Audio objects for all 39 sound files, isn't trivially done.
+Maybe someone else who knows java better than I do (my expertise is C, not java/html), 
+could someday try to optimize this process??
+
+
 ##  Licensing for this program
 Josh Nimoy's original github repository has a Creative Commons license, 
 and my derivations of his program will also be released under that license.
 His original LICENSE file is included in this repository.
+
