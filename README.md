@@ -61,7 +61,7 @@ It does *not* occur with Chrome, at least with 20 balls in flight.
 
 I have *no* firm idea what is causing this bug, so it is unlikely that I'll be able to fix it...
 
-1. My first guess is, that the javascript Audio:play() function runs to completion before
+1. My initial guess was that the javascript Audio:play() function runs to completion before
 another call can begin, and after awhile it just runs out of time to get all the sounds
 generated before the next cycle begins.
 
