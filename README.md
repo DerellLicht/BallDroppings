@@ -51,7 +51,7 @@ There is one major bug present in this application... if user gets many balls in
 (15 or so seems to be sufficient), with sounds turned on, the sounds will get confused
 and the program will completely lose control of them.  
 
-One result of this bug, is that the sounds become irregular, and it does not appear that  
+One result of this bug, is that the sounds become irregular, and it does not appear that 
 all sounds are actually present (there should be one sound for each ball, though the 
 actual sounds wrap at 39 balls).  The second result of this bug, is that if you turn 
 sounds off, they don't actually stop!!  
