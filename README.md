@@ -65,7 +65,7 @@ I have *no* firm idea what is causing this bug, so it is unlikely that I'll be a
 another call can begin, and after awhile it just runs out of time to get all the sounds
 generated before the next cycle begins.
 
-2. Another possibility is that I simply need to pre-allocate all 39 sound files,
+2. Another possibility is that I simply need to pre-allocate all 39 sound objects,
 before beginning to generate sounds.  In the current code, I allocate a new Audio
 object every time I want to generate a sound.  That is clearly inefficient, even though
 Java has garbage collection.  However, it doesn't appear to me that the program is
